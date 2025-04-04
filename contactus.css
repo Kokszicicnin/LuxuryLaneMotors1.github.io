@@ -1,0 +1,131 @@
+/* Body styling to set up the video background */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #000000; /* Set the body background to black */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Video background styling */
+#video-background {
+  position: absolute;
+  right: 20px; /* Leave space on the right */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px; /* Set video width to 400px */
+  height: 500px; /* Set video height to 500px */
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Video background styling for the left side */
+#video-background-left {
+  position: absolute;
+  left: 20px; /* Leave space on the left */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px; /* Set video width to 400px */
+  height: 500px; /* Set video height to 500px */
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Styling the container to center the form and leave space for the video */
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Remove padding to center the form */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Form styling with neon red effect */
+.form-container {
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with slight transparency */
+  padding: 20px; /* Reduce padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px); /* Adds a blurred effect to the background */
+  border: 2px solid #ff073a; /* Neon red border for form */
+  max-width: 350px; /* Limit the width of the form */
+  width: 100%;
+}
+
+h1 {
+  color: #ff073a; /* Neon red text color */
+  font-size: 2.5rem;
+  text-align: center;
+  text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a, 0 0 30px #ff073a; /* Neon effect */
+}
+
+p {
+  color: #f8f8f2; /* Light gray text */
+  text-align: center;
+}
+
+label {
+  color: #ff073a; /* Neon red for labels */
+  font-size: 1rem;
+  text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a; /* Neon effect */
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px; /* Reduce padding */
+  margin-top: 5px;
+  border: 2px solid #44475a; /* Dark grey border */
+  border-radius: 6px;
+  background-color: #1e1e1e; /* Dark background for input fields */
+  color: #f8f8f2; /* Light text inside the fields */
+  box-shadow: 0 0 5px #ff073a; /* Neon red border effect */
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #ff073a; /* Neon red border color on focus */
+  box-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a; /* Neon red glow on focus */
+}
+
+button {
+  background-color: #ff073a; /* Neon red background for the button */
+  color: #000000; /* Black text on the button */
+  padding: 10px 15px; /* Reduce padding */
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a; /* Neon red glow effect */
+}
+
+button:hover {
+  background-color: #ff4f73; /* Lighter red on hover */
+  color: #f8f8f2; /* Light text on hover */
+  box-shadow: 0 0 15px #ff073a, 0 0 20px #ff073a; /* More intense neon glow */
+}
+
+#result {
+  color: #ff073a; /* Neon red for result message */
+  text-align: center;
+}
+
+/* Additional spacing and alignment */
+.mb-6 {
+  margin-bottom: 10px; /* Reduce margin */
+}
+
+.text-center {
+  text-align: center;
+}
+
+

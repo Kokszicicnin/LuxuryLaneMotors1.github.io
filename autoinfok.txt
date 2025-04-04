@@ -1,0 +1,151 @@
+Bentley Continental GT
+
+Manufacturer	Bentley
+Production	2003–present
+Class	        Grand tourer (S)
+Body style      2-door convertible
+$230,000
+Motor           V8           550hp
+
+
+
+
+
+
+Bentley Continental
+
+Manufacturer	Bentley
+Production	2003–present
+Body style	2-door coupé
+$225,000
+Motor           V8       771hp
+
+
+
+
+
+
+Ferrari F8
+
+Manufacturer	Ferrari
+Production	2019–2023
+Class	        Sports car (S)
+Body style      2-door retractable hard-top convertible
+$284,000
+Motor           V8       710hp
+
+
+
+
+
+
+Ferrari LaFerrari
+
+Manufacturer	Ferrari
+Production	2013–2018
+Class	        Sports car (S)
+Body style	2-door coupé
+$3,500,000      
+Motor           V12       950hp
+
+
+
+
+
+
+
+
+Mercedes 300-SL
+
+Manufacturer	Mercedes-Benz
+Production	1954–1957 (coupé)
+Class           Grand tourer
+Body style	2-door coupé, roadster
+$1,400,000      
+Motor           straight-six   240hp
+
+
+
+
+
+
+
+
+Mercedes G-wagon
+
+Manufacturer    Mercedes-Benz Group (2022–present)
+Production	1979–present
+Class           Luxury SUV
+Body style      2-door SWB convertible
+$144,150
+Motor           inline-six      443hp
+
+
+
+
+
+
+
+Porsche 911
+
+Manufacturer	Porsche AG
+Production      1964 – present
+Class	        Sports car(S)
+Body style      2-door, 2+2 or 2-seat coupé
+$122,095
+Motor           V6          380hp
+
+
+
+
+
+
+
+
+Porsche GT2-RS
+
+Manufacturer	Porsche
+Production	1993–2019
+Class	        Sports car (S)
+Body style	2-door coupé
+$369,900
+Motor          flat-six    690hp
+
+
+
+
+
+
+
+Rolls-Royce Dawn
+
+Manufacturer	Rolls-Royce Motor Cars
+Production	2015–2023
+Class	        Full-size luxury car (F)
+Body style	2-door convertible
+$359,250
+Motor           V12            563hp
+
+
+
+
+
+
+
+
+Rolls-Royce Ghost
+Manufacturer	Rolls-Royce Motor Cars
+Production	2009–present
+Class	        Full-size luxury car (F)
+Body style	4-door saloon
+$340,500
+Motor           V12             550hp
+
+
+
+
+
+
+
+
+

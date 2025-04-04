@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <!-- Include the CSS file -->
+  <link rel="stylesheet" href="contactus.css">
+</head>
+<body>
+  <!-- Image Background -->
+  <div id="image-background" style="background-image: url('autos projekt/autos projekt/assets/images/porsche_911.jpg'); background-size: cover; background-position: center; height: 100vh; width: 100%; position: absolute; z-index: -1;"></div>
+
+  <!-- Video on the right side -->
+  <video id="video-background" autoplay muted loop>
+    <source src="assets/images/Video_7.mov" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Video on the left side -->
+  <video id="video-background-left" autoplay muted loop>
+    <source src="assets/images/Video_5.mov" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Contact Form Section -->
+  <div class="flex items-center min-h-screen bg-gray-900">
+    <div class="container mx-auto flex justify-center items-center w-full">
+      <div class="max-w-md mx-auto my-10 bg-gray-800 p-5 rounded-md shadow-sm">
+        <div class="text-center">
+          <h1 class="my-3 text-3xl font-semibold text-gray-100">
+            Contact Us
+          </h1>
+          <p class="text-gray-400 dark:text-gray-400">
+            Fill up the form below to send us a message.
+          </p>
+        </div>
+        <div class="m-7">
+          <form action="https://api.web3forms.com/submit" method="POST" id="form">
+            <input type="hidden" name="access_key" value="8b30b413-baff-44d6-8a09-8c9f53d7e976" />
+            <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+            <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+            <div class="mb-6">
+              <label for="name" class="block mb-2 text-sm text-gray-400">Full Name</label>
+              <input type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+            </div>
+            <div class="mb-6">
+              <label for="email" class="block mb-2 text-sm text-gray-400">Email Address</label>
+              <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+            </div>
+            <div class="mb-6">
+              <label for="phone" class="block mb-2 text-sm text-gray-400">Phone Number</label>
+              <input type="text" name="phone" id="phone" placeholder="+1 (555) 1234-567" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block mb-2 text-sm text-gray-400">Your Message</label>
+              <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" required></textarea>
+            </div>
+            <div class="mb-6">
+              <button type="submit" class="w-full bg-indigo-600 inline-block text-white no-underline hover:text-indigo-100 py-4 px-4 rounded-sm focus:outline-none">
+                Send Message
+              </button>
+            </div>
+            <p class="text-base text-center text-gray-400" id="result"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Styles for video and form alignment -->
+  <style>
+    /* Style for video background */
+    #video-background {
+      position: absolute;
+      top: 50%;
+      right: 20px; /* Right margin */
+      transform: translateY(-50%);
+      width: 400px; /* Video width */
+      height: 500px; /* Video height */
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Style for left video background */
+    #video-background-left {
+      position: absolute;
+      top: 50%;
+      left: 20px; /* Left margin */
+      transform: translateY(-50%);
+      width: 400px; /* Video width */
+      height: 500px; /* Video height */
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    /* Ensure the form is centered */
+    .container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0; /* Remove padding to center the form */
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+    }
+
+    /* Styling for the form container */
+    .max-w-md {
+      max-width: 500px;
+      margin: auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px; /* Reduce padding */
+      border-radius: 10px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Reduce margin for form elements */
+    .mb-6 {
+      margin-bottom: 10px; /* Reduce margin */
+    }
+
+    /* Reduce padding for input and textarea */
+    input, textarea {
+      padding: 8px; /* Reduce padding */
+    }
+
+    /* Reduce padding for the button */
+    button {
+      padding: 10px 15px; /* Reduce padding */
+    }
+  </style>
+</body>
+</html>

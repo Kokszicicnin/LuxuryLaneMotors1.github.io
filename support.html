@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Lane Motors</title>
+    <link rel="stylesheet" href="support.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="assets/images/luxury lane motor logo.jpg" alt="Luxury Lane Motors Logo">
+        </div>
+        <div class="nav-button">
+            <button onclick="location.href='index.html'">Home</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Video on the Left -->
+        <div class="video-container">
+            <video autoplay muted loop>
+                <source src="assets/images/support video.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Chatbot on the Right -->
+        <div class="chatbot-container">
+            <div class="chat-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/648/648594.png" alt="Car Icon">
+                <h1>Luxury Lane Motors Assistant</h1>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+            </div>
+        </div>
+    </div>
+
+    <script src="support.js"></script>
+</body>
+</html>

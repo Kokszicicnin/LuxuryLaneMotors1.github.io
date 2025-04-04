@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Agreement - Luxury Lane Motors</title>
+  <link rel="stylesheet" href="faq.css"> <!-- Reuse FAQ CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <span class="company-name">Luxury Lane Motors</span>
+    </div>
+    <div class="navbar-right">
+      <a href="index.html" class="home-button">Back to Home</a>
+      <a href="test.html" class="home-button">Back to Car Gallery</a> <!-- New button -->
+    </div>
+  </nav>
+
+  <!-- Rental Agreement Content -->
+  <div class="agreement-container">
+    <h1>Rental Agreement</h1>
+    
+    <div class="agreement-text">
+      <h2>Terms & Conditions</h2>
+      <p>By renting a vehicle from Luxury Lane Motors, you agree to the following:</p>
+      <ul>
+        <li>Minimum rental age: 25 years</li>
+        <li>Valid driver's license and credit card required</li>
+        <li>Security deposit: 20% of total rental cost (refundable upon safe return)</li>
+        <li>Mileage limit: 200 miles/day ($5/mile overage)</li>
+        <li>Late return fee: $500/day</li>
+      </ul>
+
+      <h2>Insurance Requirements</h2>
+      <p>All rentals include collision damage waiver (CDW). Additional insurance options available.</p>
+    </div>
+
+    <div class="calculator">
+      <h2>Rental Calculator</h2>
+      <form id="rentForm">
+        <label for="carSelect">Select Car:</label>
+        <select id="carSelect" required>
+          <!-- Mercedes -->
+          <optgroup label="Mercedes">
+            <option value="144150" data-daily="900">G Wagon 2020 (Full Price: $144,150)</option>
+            <option value="1400000" data-daily="21000">300-SL (Full Price: $1,400,000)</option>
+            <option value="82997" data-daily="1245">AMG GT 63-S (Full Price: $82,997)</option>
+            <option value="85050" data-daily="1275">AMG C63 (Full Price: $85,050)</option>
+          </optgroup>
+  
+          <!-- Bentley -->
+          <optgroup label="Bentley">
+            <option value="23000" data-daily="345">Continental GT (Full Price: $23,000)</option>
+            <option value="225000" data-daily="3375">Continental (Full Price: $225,000)</option>
+            <option value="207050" data-daily="3105">Bentayga (Full Price: $207,050)</option>
+          </optgroup>
+  
+          <!-- Ferrari -->
+          <optgroup label="Ferrari">
+            <option value="284000" data-daily="4260">F8 (Full Price: $284,000)</option>
+            <option value="3500000" data-daily="52500">LaFerrari (Full Price: $3,500,000)</option>
+            <option value="325900" data-daily="4885">812 Superfast (Full Price: $325,900)</option>
+          </optgroup>
+  
+          <!-- Porsche -->
+          <optgroup label="Porsche">
+            <option value="122095" data-daily="1831">911 (Full Price: $122,095)</option>
+            <option value="369900" data-daily="5548">GT2-RS (Full Price: $369,900)</option>
+            <option value="222000" data-daily="3330">Dakar (Full Price: $222,000)</option>
+          </optgroup>
+  
+          <!-- Rolls-Royce -->
+          <optgroup label="Rolls-Royce">
+            <option value="359250" data-daily="5388">Dawn (Full Price: $359,250)</option>
+            <option value="407750" data-daily="6115">Cullinan (Full Price: $407,750)</option>
+          </optgroup>
+  
+          <!-- Japanese -->
+          <optgroup label="Japanese">
+            <option value="76500" data-daily="1145">Toyota Supra MK5 (Full Price: $76,500)</option>
+            <option value="122885" data-daily="1845">Nissan GT-R R35 (Full Price: $122,885)</option>
+            <option value="44110" data-daily="660">Nissan Z (Full Price: $44,110)</option>
+            <option value="102250" data-daily="1535">Lotus Emira (Full Price: $102,250)</option>
+          </optgroup>
+  
+          <!-- American -->
+          <optgroup label="American">
+            <option value="89518" data-daily="1345">Dodge Viper (Full Price: $89,518)</option>
+            <option value="89990" data-daily="1350">Tesla Model S Plaid (Full Price: $89,990)</option>
+          </optgroup>
+  
+          <!-- Exotics -->
+          <optgroup label="Hypercars">
+            <option value="171495" data-daily="2575">Acura NSX (Full Price: $171,495)</option>
+            <option value="849950" data-daily="12750">Lexus LFA (Full Price: $849,950)</option>
+            <option value="95550" data-daily="1435">Lexus LC-500 (Full Price: $95,550)</option>
+            <option value="382500" data-daily="5735">McLaren 765LT (Full Price: $382,500)</option>
+            <option value="217000" data-daily="3255">Aston Martin DB-11 (Full Price: $217,000)</option>
+            <option value="268132" data-daily="4020">Aston Martin DBS Superleggera (Full Price: $268,132)</option>
+            <option value="3400000" data-daily="51000">Pagani Utopia (Full Price: $3,400,000)</option>
+            <option value="6500000" data-daily="97500">Pagani Zonda R (Full Price: $6,500,000)</option>
+          </optgroup>
+        </select>
+  
+        <label for="days">Rental Days:</label>
+        <input type="number" id="days" min="1" value="1" required>
+  
+        <div class="results">
+          <p>Car Value: <span id="fullPrice">$144,150</span></p>
+          <p>Daily Rate: <span id="dailyRate">$900</span></p>
+          <p>Deposit (20%): <span id="deposit">$180</span></p>
+          <p class="subtotal">Subtotal: <span id="subtotal">$1,080</span></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    // Same calculation script as before
+    function calculateRent() {
+      const carSelect = document.getElementById('carSelect');
+      const days = parseInt(document.getElementById('days').value);
+      const fullPrice = parseFloat(carSelect.value);
+      const dailyRate = parseFloat(carSelect.selectedOptions[0].dataset.daily);
+      const totalCost = dailyRate * days;
+      const deposit = totalCost * 0.2;
+      const subtotal = totalCost + deposit;
+  
+      document.getElementById('fullPrice').textContent = `$${fullPrice.toLocaleString()}`;
+      document.getElementById('dailyRate').textContent = `$${dailyRate.toLocaleString()}`;
+      document.getElementById('deposit').textContent = `$${deposit.toLocaleString()}`;
+      document.getElementById('subtotal').textContent = `$${subtotal.toLocaleString()}`;
+    }
+  
+    document.getElementById('carSelect').addEventListener('change', calculateRent);
+    document.getElementById('days').addEventListener('input', calculateRent);
+    calculateRent();
+  </script>
+</body>
+</html>
